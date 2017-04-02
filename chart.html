@@ -1,0 +1,35 @@
+<head>
+<style>
+.container {
+  width: 80%;
+  margin: 15px auto;
+}
+</style>
+<div class="container">
+  <h2>Line Chart</h2>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    datasets: [{
+      label: 'Sleep',
+      data: [8, 8, 10, 4, 5, 3.5, 5, 13],
+      backgroundColor: "rgba(153,255,51,0.6)"
+    }, {
+      label: 'Average Heart rate',
+      data: [7.3, 7.4, 7.2, 6.3, 6.2, 5.9, 5, 0],
+      backgroundColor: "rgba(255,153,0,0.6)"
+    }]
+  }
+});
+</script>
+
+</head>
